@@ -1,0 +1,492 @@
+\hypertarget{classJeu}{}\doxysection{Jeu Class Reference}
+\label{classJeu}\index{Jeu@{Jeu}}
+
+
+Définit le jeu et le fait marcher.  
+
+
+
+
+{\ttfamily \#include $<$Jeu.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJeu_a761922c68b88c0390e2b27f75495a09a}{Initialiser\+Plateau}} ()
+\item 
+\mbox{\Hypertarget{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}\label{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}} 
+\mbox{\hyperlink{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJeu_aca6f30f5d33abc0fd399e39e607feae2}{Jeu}} (int nb\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Autre constructeur qui prends en paramètre le nombre de joueur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a9cd19e73df169d7f09397be61ba8548c}\label{classJeu_a9cd19e73df169d7f09397be61ba8548c}} 
+\mbox{\hyperlink{classJeu_a9cd19e73df169d7f09397be61ba8548c}{$\sim$\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+Etat\+Jeu \mbox{\hyperlink{classJeu_a830c0abb8fa58ba490ea20a1d59d927a}{Get\+Etat}} () const
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}etat actuel du jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a7e9f74333c33a64e06a153da0e929eee}{Set\+Etat}} (Etat\+Jeu etat\+\_\+jeu)
+\begin{DoxyCompactList}\small\item\em modifie l\textquotesingle{}etat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a9f207e49e214c58721349425e87e3a18}{Set\+Nb\+Joueur}} (int nb)
+\begin{DoxyCompactList}\small\item\em Remplie le nombre de joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_a5a2f794e38096fc12504ac2705d77a54}{Get\+Nb\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Retourne nbr joueurs actuel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a49de4c9cc65dd60c743a2417d8235784}{Set\+Nb\+Joueur\+Reel}} (int nb)
+\begin{DoxyCompactList}\small\item\em Remplie le nombre de joueur reel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a25c27e1315766e99e97faf31dcb0023d}\label{classJeu_a25c27e1315766e99e97faf31dcb0023d}} 
+int \mbox{\hyperlink{classJeu_a25c27e1315766e99e97faf31dcb0023d}{Get\+Nb\+Joueur\+Reel}} () const
+\begin{DoxyCompactList}\small\item\em Retourne nbr joueurs actuel reel. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{classJeu_ad886ccb5525469655c7a24b01520ea2f}{Get\+Coordo\+Poule}} (int i) const
+\begin{DoxyCompactList}\small\item\em retourne les coordonée de la poule d\textquotesingle{}un joueur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a4e927a68a2bebb33139de9e6a59e94c5}{Set\+Coordo\+Poule}} (int i, float cx, float cy)
+\begin{DoxyCompactList}\small\item\em remplie coordonnee de la poule d\textquotesingle{}un joueur \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{classJeu_a4c59d5239889828c3481f9aa9b9fa05e}{Get\+Chemin}} (int i)
+\begin{DoxyCompactList}\small\item\em retoune les coordonnees d\textquotesingle{}indice i \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_ae382e540b6ca1046819784a3f80f0904}{Get\+Joueur\+Actuel}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le joueur actuel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a334915b77bbb8e75b498c2848e49c25d}{Set\+Joueur\+Actuel}} (int i)
+\begin{DoxyCompactList}\small\item\em Modifie le joueurs actuel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_ae838370881b8f2880a6504d97ffc19c3}\label{classJeu_ae838370881b8f2880a6504d97ffc19c3}} 
+void \mbox{\hyperlink{classJeu_ae838370881b8f2880a6504d97ffc19c3}{Demarer\+\_\+\+Jeu}} (char tab\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Demarer jeu place les pions et les joueurs pour le debut du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_abd0000354eb6ff644799f45ce0283bdc}{Affichage\+Limite\+Terrain\+\_\+\+SDL}} (int t\+\_\+x, int t\+\_\+y, char tab\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em affiche le jeu sous la console \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a83e544a38e83b4f1546eab4d570c05a4}{Verifier\+Collision}} (\mbox{\hyperlink{classPion}{Pion}} \&pion\+\_\+deplace, \mbox{\hyperlink{classJoueur}{Joueur}} \&joueur\+\_\+actuel)
+\begin{DoxyCompactList}\small\item\em verifie la collision entre les autres pions des autres joeur et le joueur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDe}{De}} \& \mbox{\hyperlink{classJeu_ad786386c54430566fd524cdfaa812a94}{Get\+De}} ()
+\begin{DoxyCompactList}\small\item\em renvoie le de du jeu \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJoueur}{Joueur}} $\ast$ \mbox{\hyperlink{classJeu_a1cf290f9dcd9e1f75ed2f9737bb929c2}{Get\+Joueur}} (unsigned int id) const
+\begin{DoxyCompactList}\small\item\em renvoie le joueur d\textquotesingle{}identifiant en param \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a683dcabdc45341715bd15696182005fc}{Verifier\+Arrivee}} (\mbox{\hyperlink{classPion}{Pion}} pion, \mbox{\hyperlink{classJoueur}{Joueur}} \&joueur)
+\begin{DoxyCompactList}\small\item\em verifie si le pion du joueur est arrive \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_afba31980aa0575d43375aae815b69e21}{Gerer\+\_\+\+Tour}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&j, bool \&sortir\+\_\+pion, bool \&lancer\+\_\+de)
+\begin{DoxyCompactList}\small\item\em gere les tours pour chaque joueur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_a077e4ffa538acd16068dae75a29221a3}{Id\+Vers\+Case}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&j) const
+\begin{DoxyCompactList}\small\item\em donne la case depart du pion en fonction de son id \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_ae95271bcab12aede8a878f0fcc9fa3c3}\label{classJeu_ae95271bcab12aede8a878f0fcc9fa3c3}} 
+void \mbox{\hyperlink{classJeu_ae95271bcab12aede8a878f0fcc9fa3c3}{Gerer\+Tour\+IA}} ()
+\begin{DoxyCompactList}\small\item\em gere le logique du tour de l\textquotesingle{}IA \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_add56fff09c08fea0439bf183ce87aea0}{Gerer\+\_\+\+Jeu}} (int id\+\_\+pion\+\_\+deplacer)
+\begin{DoxyCompactList}\small\item\em Gere le jeu pour chaque tour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_a12bda62307d3e817a43af87f2673f0d1}{IAdoit\+Jouer}} () const
+\begin{DoxyCompactList}\small\item\em verifie si c\textquotesingle{}est IA qui joue ou HUMAIN \end{DoxyCompactList}\item 
+const pair$<$ int, int $>$ $\ast$ \mbox{\hyperlink{classJeu_a8675de0416d689d5720d63b53b2174e6}{Idvers\+Tableau\+Gagnant}} (int id\+\_\+joueur) const
+\begin{DoxyCompactList}\small\item\em Donne le tableau de la zone gagnante en fonction de l\textquotesingle{}id du joueur, la fonction est const donc on retourne un const. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_aa5c323fdbd57a058be904a3bccab757b}{Configurer\+Nb\+Joueurs}} (int nb\+\_\+humains)
+\begin{DoxyCompactList}\small\item\em configure dynamiquement les types des joueurs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a962788c237f8ee105c8cc626ac4ab18b}\label{classJeu_a962788c237f8ee105c8cc626ac4ab18b}} 
+void \mbox{\hyperlink{classJeu_a962788c237f8ee105c8cc626ac4ab18b}{Affichageconsole}} ()
+\begin{DoxyCompactList}\small\item\em permet de faire l\textquotesingle{}affichage sur la console \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPion}{Pion}} \& \mbox{\hyperlink{classJeu_a5b4c2ef10f338e7f17697a12cdf71ceb}{Choisir\+Pionconsole}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur, int val\+\_\+de)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de choisir un pion à déplacer via la console. Cette fonction permet de choisir un pion disponible du joueur selon les règles du jeu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_ae1a71df86a50d21f9b219bc9d9f22990}{AGagner}} (\mbox{\hyperlink{classJoueur}{Joueur}} \&joueur)
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueur a gagné la partie. Cette fonction verifie le joueur a gagné la partie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a124c841f6cd9f34eccbc2f4799880a58}\label{classJeu_a124c841f6cd9f34eccbc2f4799880a58}} 
+void \mbox{\hyperlink{classJeu_a124c841f6cd9f34eccbc2f4799880a58}{Test\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em teste toutes les fonctions de la classe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Définit le jeu et le fait marcher. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJeu_aca6f30f5d33abc0fd399e39e607feae2}\label{classJeu_aca6f30f5d33abc0fd399e39e607feae2}} 
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Jeu()}{Jeu()}}
+{\footnotesize\ttfamily Jeu\+::\+Jeu (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+j }\end{DoxyParamCaption})}
+
+
+
+Autre constructeur qui prends en paramètre le nombre de joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+j} & nombre de joueur \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJeu_abd0000354eb6ff644799f45ce0283bdc}\label{classJeu_abd0000354eb6ff644799f45ce0283bdc}} 
+\index{Jeu@{Jeu}!AffichageLimiteTerrain\_SDL@{AffichageLimiteTerrain\_SDL}}
+\index{AffichageLimiteTerrain\_SDL@{AffichageLimiteTerrain\_SDL}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{AffichageLimiteTerrain\_SDL()}{AffichageLimiteTerrain\_SDL()}}
+{\footnotesize\ttfamily void Jeu\+::\+Affichage\+Limite\+Terrain\+\_\+\+SDL (\begin{DoxyParamCaption}\item[{int}]{t\+\_\+x,  }\item[{int}]{t\+\_\+y,  }\item[{char}]{tab\mbox{[}4\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+affiche le jeu sous la console 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & jeu \\
+\hline
+{\em t\+\_\+x} & taille x de la fenetre \\
+\hline
+{\em t\+\_\+y} & taille y de la fenetre \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_ae1a71df86a50d21f9b219bc9d9f22990}\label{classJeu_ae1a71df86a50d21f9b219bc9d9f22990}} 
+\index{Jeu@{Jeu}!AGagner@{AGagner}}
+\index{AGagner@{AGagner}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{AGagner()}{AGagner()}}
+{\footnotesize\ttfamily bool Jeu\+::\+AGagner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueur a gagné la partie. Cette fonction verifie le joueur a gagné la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Référence vers le joueur a vérifiée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Si le joueur a rempli toutes les conditions de victoire. 
+
+false Sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a5b4c2ef10f338e7f17697a12cdf71ceb}\label{classJeu_a5b4c2ef10f338e7f17697a12cdf71ceb}} 
+\index{Jeu@{Jeu}!ChoisirPionconsole@{ChoisirPionconsole}}
+\index{ChoisirPionconsole@{ChoisirPionconsole}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{ChoisirPionconsole()}{ChoisirPionconsole()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPion}{Pion}} \& Jeu\+::\+Choisir\+Pionconsole (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur,  }\item[{int}]{val\+\_\+de }\end{DoxyParamCaption})}
+
+
+
+Permet au joueur de choisir un pion à déplacer via la console. Cette fonction permet de choisir un pion disponible du joueur selon les règles du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joueur} & Référence vers le joueur qui doit jouer. \\
+\hline
+{\em val\+\_\+de} & La valeur du dé lancée au tour actuel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classPion}{Pion}}\& Référence vers le pion choisi par le joueur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aa5c323fdbd57a058be904a3bccab757b}\label{classJeu_aa5c323fdbd57a058be904a3bccab757b}} 
+\index{Jeu@{Jeu}!ConfigurerNbJoueurs@{ConfigurerNbJoueurs}}
+\index{ConfigurerNbJoueurs@{ConfigurerNbJoueurs}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{ConfigurerNbJoueurs()}{ConfigurerNbJoueurs()}}
+{\footnotesize\ttfamily void Jeu\+::\+Configurer\+Nb\+Joueurs (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+humains }\end{DoxyParamCaption})}
+
+
+
+configure dynamiquement les types des joueurs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+humains} & le nb de joueurs humain pour la partie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_add56fff09c08fea0439bf183ce87aea0}\label{classJeu_add56fff09c08fea0439bf183ce87aea0}} 
+\index{Jeu@{Jeu}!Gerer\_Jeu@{Gerer\_Jeu}}
+\index{Gerer\_Jeu@{Gerer\_Jeu}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Gerer\_Jeu()}{Gerer\_Jeu()}}
+{\footnotesize\ttfamily void Jeu\+::\+Gerer\+\_\+\+Jeu (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+pion\+\_\+deplacer }\end{DoxyParamCaption})}
+
+
+
+Gere le jeu pour chaque tour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+pion\+\_\+deplacer} & id du pion a deplacer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_afba31980aa0575d43375aae815b69e21}\label{classJeu_afba31980aa0575d43375aae815b69e21}} 
+\index{Jeu@{Jeu}!Gerer\_Tour@{Gerer\_Tour}}
+\index{Gerer\_Tour@{Gerer\_Tour}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Gerer\_Tour()}{Gerer\_Tour()}}
+{\footnotesize\ttfamily void Jeu\+::\+Gerer\+\_\+\+Tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{j,  }\item[{bool \&}]{sortir\+\_\+pion,  }\item[{bool \&}]{lancer\+\_\+de }\end{DoxyParamCaption})}
+
+
+
+gere les tours pour chaque joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & le joueur actuel \\
+\hline
+{\em sortir\+\_\+pion} & si le joueur veut sortir un pion de la base \\
+\hline
+{\em lancer\+\_\+de} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a4c59d5239889828c3481f9aa9b9fa05e}\label{classJeu_a4c59d5239889828c3481f9aa9b9fa05e}} 
+\index{Jeu@{Jeu}!GetChemin@{GetChemin}}
+\index{GetChemin@{GetChemin}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetChemin()}{GetChemin()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Jeu\+::\+Get\+Chemin (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+retoune les coordonnees d\textquotesingle{}indice i 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & l\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_ad886ccb5525469655c7a24b01520ea2f}\label{classJeu_ad886ccb5525469655c7a24b01520ea2f}} 
+\index{Jeu@{Jeu}!GetCoordoPoule@{GetCoordoPoule}}
+\index{GetCoordoPoule@{GetCoordoPoule}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetCoordoPoule()}{GetCoordoPoule()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Jeu\+::\+Get\+Coordo\+Poule (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+retourne les coordonée de la poule d\textquotesingle{}un joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pair$<$int, int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_ad786386c54430566fd524cdfaa812a94}\label{classJeu_ad786386c54430566fd524cdfaa812a94}} 
+\index{Jeu@{Jeu}!GetDe@{GetDe}}
+\index{GetDe@{GetDe}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetDe()}{GetDe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDe}{De}} \& Jeu\+::\+Get\+De (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renvoie le de du jeu 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classDe}{De}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a830c0abb8fa58ba490ea20a1d59d927a}\label{classJeu_a830c0abb8fa58ba490ea20a1d59d927a}} 
+\index{Jeu@{Jeu}!GetEtat@{GetEtat}}
+\index{GetEtat@{GetEtat}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetEtat()}{GetEtat()}}
+{\footnotesize\ttfamily Etat\+Jeu Jeu\+::\+Get\+Etat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne l\textquotesingle{}etat actuel du jeu 
+
+\begin{DoxyReturn}{Returns}
+Etat\+Jeu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a1cf290f9dcd9e1f75ed2f9737bb929c2}\label{classJeu_a1cf290f9dcd9e1f75ed2f9737bb929c2}} 
+\index{Jeu@{Jeu}!GetJoueur@{GetJoueur}}
+\index{GetJoueur@{GetJoueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetJoueur()}{GetJoueur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJoueur}{Joueur}} $\ast$ Jeu\+::\+Get\+Joueur (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+renvoie le joueur d\textquotesingle{}identifiant en param 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & l\textquotesingle{}identifiant du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJoueur}{Joueur}} $\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_ae382e540b6ca1046819784a3f80f0904}\label{classJeu_ae382e540b6ca1046819784a3f80f0904}} 
+\index{Jeu@{Jeu}!GetJoueurActuel@{GetJoueurActuel}}
+\index{GetJoueurActuel@{GetJoueurActuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetJoueurActuel()}{GetJoueurActuel()}}
+{\footnotesize\ttfamily int Jeu\+::\+Get\+Joueur\+Actuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le joueur actuel. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a5a2f794e38096fc12504ac2705d77a54}\label{classJeu_a5a2f794e38096fc12504ac2705d77a54}} 
+\index{Jeu@{Jeu}!GetNbJoueur@{GetNbJoueur}}
+\index{GetNbJoueur@{GetNbJoueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{GetNbJoueur()}{GetNbJoueur()}}
+{\footnotesize\ttfamily int Jeu\+::\+Get\+Nb\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne nbr joueurs actuel. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a12bda62307d3e817a43af87f2673f0d1}\label{classJeu_a12bda62307d3e817a43af87f2673f0d1}} 
+\index{Jeu@{Jeu}!IAdoitJouer@{IAdoitJouer}}
+\index{IAdoitJouer@{IAdoitJouer}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{IAdoitJouer()}{IAdoitJouer()}}
+{\footnotesize\ttfamily bool Jeu\+::\+IAdoit\+Jouer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+verifie si c\textquotesingle{}est IA qui joue ou HUMAIN 
+
+\begin{DoxyReturn}{Returns}
+true si c\textquotesingle{}est une IA 
+
+false le cas echeant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a077e4ffa538acd16068dae75a29221a3}\label{classJeu_a077e4ffa538acd16068dae75a29221a3}} 
+\index{Jeu@{Jeu}!IdVersCase@{IdVersCase}}
+\index{IdVersCase@{IdVersCase}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{IdVersCase()}{IdVersCase()}}
+{\footnotesize\ttfamily int Jeu\+::\+Id\+Vers\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{j }\end{DoxyParamCaption}) const}
+
+
+
+donne la case depart du pion en fonction de son id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & le joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a8675de0416d689d5720d63b53b2174e6}\label{classJeu_a8675de0416d689d5720d63b53b2174e6}} 
+\index{Jeu@{Jeu}!IdversTableauGagnant@{IdversTableauGagnant}}
+\index{IdversTableauGagnant@{IdversTableauGagnant}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{IdversTableauGagnant()}{IdversTableauGagnant()}}
+{\footnotesize\ttfamily const pair$<$ int, int $>$ $\ast$ Jeu\+::\+Idvers\+Tableau\+Gagnant (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+joueur }\end{DoxyParamCaption}) const}
+
+
+
+Donne le tableau de la zone gagnante en fonction de l\textquotesingle{}id du joueur, la fonction est const donc on retourne un const. 
+
+\begin{DoxyReturn}{Returns}
+const pair$<$int, int$>$$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a761922c68b88c0390e2b27f75495a09a}\label{classJeu_a761922c68b88c0390e2b27f75495a09a}} 
+\index{Jeu@{Jeu}!InitialiserPlateau@{InitialiserPlateau}}
+\index{InitialiserPlateau@{InitialiserPlateau}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{InitialiserPlateau()}{InitialiserPlateau()}}
+{\footnotesize\ttfamily void Jeu\+::\+Initialiser\+Plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@ initialise les elements du plateau \mbox{\Hypertarget{classJeu_a4e927a68a2bebb33139de9e6a59e94c5}\label{classJeu_a4e927a68a2bebb33139de9e6a59e94c5}} 
+\index{Jeu@{Jeu}!SetCoordoPoule@{SetCoordoPoule}}
+\index{SetCoordoPoule@{SetCoordoPoule}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{SetCoordoPoule()}{SetCoordoPoule()}}
+{\footnotesize\ttfamily void Jeu\+::\+Set\+Coordo\+Poule (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{float}]{cx,  }\item[{float}]{cy }\end{DoxyParamCaption})}
+
+
+
+remplie coordonnee de la poule d\textquotesingle{}un joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cx} & coordo x \\
+\hline
+{\em cy} & coordo y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a7e9f74333c33a64e06a153da0e929eee}\label{classJeu_a7e9f74333c33a64e06a153da0e929eee}} 
+\index{Jeu@{Jeu}!SetEtat@{SetEtat}}
+\index{SetEtat@{SetEtat}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{SetEtat()}{SetEtat()}}
+{\footnotesize\ttfamily void Jeu\+::\+Set\+Etat (\begin{DoxyParamCaption}\item[{Etat\+Jeu}]{etat\+\_\+jeu }\end{DoxyParamCaption})}
+
+
+
+modifie l\textquotesingle{}etat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em etat\+\_\+jeu} & l etat du jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a334915b77bbb8e75b498c2848e49c25d}\label{classJeu_a334915b77bbb8e75b498c2848e49c25d}} 
+\index{Jeu@{Jeu}!SetJoueurActuel@{SetJoueurActuel}}
+\index{SetJoueurActuel@{SetJoueurActuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{SetJoueurActuel()}{SetJoueurActuel()}}
+{\footnotesize\ttfamily void Jeu\+::\+Set\+Joueur\+Actuel (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Modifie le joueurs actuel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & indice du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a9f207e49e214c58721349425e87e3a18}\label{classJeu_a9f207e49e214c58721349425e87e3a18}} 
+\index{Jeu@{Jeu}!SetNbJoueur@{SetNbJoueur}}
+\index{SetNbJoueur@{SetNbJoueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{SetNbJoueur()}{SetNbJoueur()}}
+{\footnotesize\ttfamily void Jeu\+::\+Set\+Nb\+Joueur (\begin{DoxyParamCaption}\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Remplie le nombre de joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & nbr de jo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a49de4c9cc65dd60c743a2417d8235784}\label{classJeu_a49de4c9cc65dd60c743a2417d8235784}} 
+\index{Jeu@{Jeu}!SetNbJoueurReel@{SetNbJoueurReel}}
+\index{SetNbJoueurReel@{SetNbJoueurReel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{SetNbJoueurReel()}{SetNbJoueurReel()}}
+{\footnotesize\ttfamily void Jeu\+::\+Set\+Nb\+Joueur\+Reel (\begin{DoxyParamCaption}\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Remplie le nombre de joueur reel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & nbr de joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a683dcabdc45341715bd15696182005fc}\label{classJeu_a683dcabdc45341715bd15696182005fc}} 
+\index{Jeu@{Jeu}!VerifierArrivee@{VerifierArrivee}}
+\index{VerifierArrivee@{VerifierArrivee}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{VerifierArrivee()}{VerifierArrivee()}}
+{\footnotesize\ttfamily void Jeu\+::\+Verifier\+Arrivee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPion}{Pion}}}]{pion,  }\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur }\end{DoxyParamCaption})}
+
+
+
+verifie si le pion du joueur est arrive 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pion} & le pion du joueur \\
+\hline
+{\em joueur} & le joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a83e544a38e83b4f1546eab4d570c05a4}\label{classJeu_a83e544a38e83b4f1546eab4d570c05a4}} 
+\index{Jeu@{Jeu}!VerifierCollision@{VerifierCollision}}
+\index{VerifierCollision@{VerifierCollision}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{VerifierCollision()}{VerifierCollision()}}
+{\footnotesize\ttfamily void Jeu\+::\+Verifier\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPion}{Pion}} \&}]{pion\+\_\+deplace,  }\item[{\mbox{\hyperlink{classJoueur}{Joueur}} \&}]{joueur\+\_\+actuel }\end{DoxyParamCaption})}
+
+
+
+verifie la collision entre les autres pions des autres joeur et le joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pion\+\_\+deplace} & 1 ptr sur \mbox{\hyperlink{classPion}{Pion}} qui est le pion du joueur a deplacer \\
+\hline
+{\em jouur\+\_\+actuel} & le joueur qui joue le tour \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Jeu.\+h\item 
+src/Jeu.\+cpp\end{DoxyCompactItemize}

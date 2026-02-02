@@ -1,0 +1,403 @@
+for(int i=0; i<5; i++)
+{
+    t[i+1]={6*40,(13-i)*40};
+}
+for(int i=1; i<5; i++)
+{
+    t[i+5]={6-i;8};
+}
+
+
+
+void Joueur::CoordonneesPionPoule(float x, float y)
+{
+	tab_poule[0]={x,y};
+	tab_poule[1]={x+2, y};
+	tab_poule[2]={x, y-2};
+	tab_poule[3]={x+2, y-2};
+}
+
+
+
+//// FONCTION DU JEU.CPP QUE J4AI ENLEVE //////
+
+/*
+int Jeu::JoueurLanceDe(unsigned int id_joueur, De de){
+    de.LancerDe();
+    cout<<"le joueur: "<<joueurs[id_joueur]->getId()<< "a lance le de : "<<de.GetVal()<< endl;
+    return de.GetVal();
+}
+
+vector<Pion*> Jeu:: RecupDesPionsEnJeu(Joueur &joueur){
+    vector<Pion*> pionsEnjeu;
+    for(int i=0; i<4; i++){
+        Pion * pion = joueur.GetPion(i);    //recupère les pions, tu peux pas utiliser tab direct
+
+        if(pion != nullptr && !pion->GetEstArrive() && pion->GetEstSorti()){
+            pionsEnjeu.push_back(pion);
+        }
+    }
+    return pionsEnjeu;
+}
+
+bool Jeu::GererEntreeJeu(Joueur &joueur, int val_de){
+    //val_de = de.GetVal();
+    if (val_de==6){
+        //chercher un pion qui n'est pas encore sorti
+        for(int i=0; i<4; i++){
+            Pion* pion_sorti=joueur.GetPion(i);
+            if(pion_sorti != nullptr && !pion_sorti->GetEstSorti()){ //si le pion n'est pas sorti
+                pion_sorti->SortirBase();
+                cout<<"le joueur: "<< joueur.getId() <<" a fait sortir un pion" <<endl;
+                cout << "Statut après sortie : " << pion_sorti->GetEstSorti() << endl;  // Vérifie si c'est bien true
+                return true;
+            }
+
+        }
+        
+    }
+    //cout<<"Aucun pion en jeu(no 6)"<<endl;
+    return false;
+}
+
+Pion* Jeu::ChoisirPion(vector<Pion*> PionsEnJeu, Joueur &joueur ){
+    if(PionsEnJeu.size()== 1){ //si un seul pion en jeu, le return
+        return PionsEnJeu[0]; 
+    }
+
+    cout<<"Choississez 1 pion à déplacer (1-4): ";
+    int choix;
+    cin>>choix;
+
+    while(choix < 1 || choix > 4 ||
+         !joueur.GetPion(choix -1)->GetEstSorti() || joueur.GetPion(choix -1)->GetEstArrive()){
+            cout<<"choix de pon invalide.Reessayer !";
+            cin>>choix;
+    }
+
+    return joueur.GetPion(choix -1);
+}
+
+
+
+
+void Jeu::VerifierCollision(Pion* pion_deplace, Joueur &joueur_actuel){
+    for(size_t i=0; i<joueurs.size(); i++){     // ici i de type size_t type entier non signé pour représenter taille des objets en mémoire,
+        Joueur& autre_joueur = *joueurs[i];   //Utlisation de la boucle 
+
+        if(autre_joueur.getId() !=joueur_actuel.getId()){
+            for(int j=0; j<4; j++){
+                if(autre_joueur.GetPion(i)->GetI() == pion_deplace->GetI()){
+                    autre_joueur.GetPion(i)->RetournerBase();
+                    cout << "Le pion adverse "<< autre_joueur.GetPion(i)->GetI()
+                    <<" retourne àa la base"<<endl;   
+                }
+            }
+        }
+    }
+
+}
+
+void Jeu::VerifierArrivee(Pion* pion, Joueur &joueur){
+    if(pion->GetId() >= 56){ //si 5- est la derniere cas
+        joueur.IncrementerNbPionArrive(); //on increment le nbpionarrive, impossible de faire nbpionarrivee ++ car membre privee
+        cout<<"Le pion " <<pion->GetId()<<" du joueur "<<joueur.getId()<< " est arrive "<<endl;
+
+    } 
+}
+
+void Jeu::Gerer_Tour(Joueur &joueur){
+    //pour debuguer
+    if(joueur.Joueur_Gagnant()){
+        cout<<"Le joueur "<< joueur.getId()<< "a deja gagné !" <<endl;
+        return ; 
+    }
+
+    if(joueur.Joueur_Gagnant()==false)
+    {
+        cout<<"Tour du joueur: "<< joueur.getId()<<"!"<<endl;
+        
+       //Recup les pions en jeu avant de lancer le dé
+       vector<Pion*> pions_en_jeu=RecupDesPionsEnJeu(joueur);
+
+        //1.lancé du dé
+        int val_de=0;
+        De de;
+        val_de=JoueurLanceDe(joueur.getId(), de);
+
+        //2.si aucun pio n'est en jeu, essayer de faire entrer un pion
+
+        //gerer le cas ou aucun pion n'est sur le plateau
+        if(pions_en_jeu.empty()){
+            //val_de=JoueurLanceDe(joueur.getId(), de);
+            if(GererEntreeJeu(joueur, val_de)){
+                cout<<"Un pion du joueur " <<joueur.getId()<< " est entré en jeu "<<endl;
+                return ; //fin du tour si un pion a éte mis en jeu
+
+            }else{
+                cout<<"Aucun pion ne peut entrer en jeu.Fin du tour joueur "<<joueur.getId()<< endl;
+                return ; //fin du tour si aucun pion ne peut entrer en jeu
+            }
+          
+        }
+
+        //choisir un pion à deplacer
+        Pion* pion_choisi=ChoisirPion(pions_en_jeu, joueur);
+        if(!pion_choisi){
+            cout<<"Aucun pion valide selectionne" <<endl;
+            return;
+        }
+
+        //deplacer le pion
+        DeplacerPion(pion_choisi, val_de);
+
+        //veifier si un pion a atteint l'arrivee avant de verifier la collision
+        VerifierArrivee(pion_choisi, joueur);
+
+        //verifier les collisions sssi le pion n'a pas atteint l'arrivee
+        if(!pion_choisi->GetEstArrive()){
+            VerifierCollision(pion_choisi,joueur);
+        }
+        
+        //verifier si le joueur a gagne apres son move
+        if(joueur.Joueur_Gagnant())
+        {
+            joueurs_gagnants.push_back(&joueur);        //passe l'adresse 
+        }
+
+        cout <<"Fin du tour du joueur " <<joueur.getId() <<endl;        
+    }
+
+}
+
+*/
+
+
+
+
+
+/*
+void Jeu::Gerer_Jeu (bool &lancer_de, bool &sortir_pion)
+{
+    if(lancer_de)
+    {
+        
+        //for(int i=4; i<nb_Joueur; i++)
+        //{
+            Gerer_Tour(*joueurs[0], sortir_pion, lancer_de);
+        //}
+    }
+    
+   if(lancer_de || sortir_pion)
+   {
+    cout<<"de a ete lancer et sortir pion: "<<sortir_pion<<endl;
+    Gerer_Tour(*joueurs[0], sortir_pion, lancer_de);  
+   }
+   //Gerer_Tour(*joueurs[1], sortir_pion);
+}*/
+
+/*
+void Jeu::Gerer_Jeu(bool & lancer_de, bool &sortir_pion)
+{
+    if(lancer_de) de.LancerDe();
+    
+
+    if(sortir_pion)
+    {
+        cout<<"sorti du pion"<<endl;
+        joueurs[0]->SortirPionBase(make_pair(10,10));    
+        //lancer_de=false;
+        sortir_pion = false;
+    }else{
+        //lancer_de=false;
+        sortir_pion = false;
+        
+        //delacement et collisison
+    }
+    
+
+}
+
+
+
+/*void Jeu::DeplacerPion(Pion* pion, int val_de){
+    pion->SetI(val_de);
+    cout<<"le pion "<< pion->GetId()<< "avance de " <<val_de <<"cases." <<endl;
+}*/
+
+
+///dans AFFICHAGESDL///
+/*void AffichageSDL:: AffPionRouge(Jeu &jeu){
+    Joueur* joueur_Rouge=jeu.getJoueur(0);; //joueur 0 = rouge
+
+    int x, y;
+    for(int i=0; i<4; i++){
+        Pion* pion=joueur_Rouge->GetPion(i);
+
+        //ne rien afficher si pon est en base
+        if(!pion->GetEstSorti()) continue;
+        //sinon
+        int position= pion->GetI(); //position i du pion
+
+        if(position <=53){ //dans le chemin commun a tous 
+            pair<int, int> coord=jeu.GetCoordonnes(position);
+            x=coord.first;
+            y=coord.second;
+
+        }else{ //dans sa zone d'arrivee donc gagnante
+            pair<int, int> coord=jeu.GetZoneGagnateRouge(position);
+            x=coord.first;
+            y=coord.second;
+        }
+        //Affiche le pion rouge à la bonne position
+        m_pion_rouge[i].draw(m_renderer, x, y, 40, 40);
+    }
+}*/
+
+/*
+void AffichageSDL::SdlBoucle(Jeu &Jeu)
+{
+    SDL_Event events;   //Stocke les événements (clavier, souris, fermeture, etc.).
+    bool quit = false;  //Contrôle la boucle (true = fin du programme).
+    bool de_lancer = false;
+    bool sortir_pion = false;
+    bool de_lancer_aff = false;
+
+    //int val_de = 0;
+    //bool autoriser_sortie = false;
+
+    De de;
+    
+    
+
+    // tant que ce n'est pas la fin ...
+    while (!quit)
+    {
+
+        // tant qu'il y a des evenements à traiter (cette boucle n'est pas bloquante)
+        while (SDL_PollEvent(&events))  // vérifie s'il y a des événements à traiter.
+        {                               //S'il y a un événement, il est stocké dans events.
+            if (events.type == SDL_QUIT){
+                quit = true; //Si l'utilisateur clique sur la croix de la fenêtre (SDL_QUIT),
+                // on met quit = true pour quitter la boucle.
+            }
+              
+            else if (events.type == SDL_KEYDOWN)        //si une touche est pressee (SDL_KEYDOWN ), on verifie laquelle
+            {
+                switch (events.key.keysym.scancode) // contient le code scancode de la touche qui a été pressée. 
+                                                    //Le scancode est un identifiant numérique unique qui représente 
+                                                    //chaque touche du clavier indépendamment de sa position sur le clavier 
+                                                    //ou de la disposition du clavier.
+                { 
+                case SDL_SCANCODE_ESCAPE:            //Scancode pour la touche Q sur le clavier.
+                    quit = true;
+                    break;
+
+                case SDL_SCANCODE_SPACE: 
+                        de_lancer = true;
+                        de_lancer_aff = true;
+                    break;
+
+                case SDL_SCANCODE_RETURN:
+
+                    sortir_pion = true;
+
+                   
+
+                default:
+                    break;
+                }
+            }
+        }
+
+        
+        
+
+        if(de_lancer)// || sortir_pion)
+        {
+            cout<<"de  lancer"<<de_lancer<<endl;
+            cout<<"sortir_pion"<<sortir_pion<<endl;
+            Jeu.Gerer_Jeu(de_lancer, sortir_pion);
+            cout<<"de lancer et val: "<<Jeu.GetDe().GetVal()<<endl;
+            de_lancer=false;
+
+        }
+
+        SdlAff(de_lancer_aff, de, Jeu); 
+        de_lancer_aff = false;
+
+        SDL_RenderPresent(m_renderer);  //afiche le rendu (sinon les modifications ne sont pas visibles)
+    }
+}*/
+
+// Enum pour les états du jeu
+/*enum EtatJeu {
+    ATTENTE_LANCER_DE,
+    ATTENTE_ACTION,
+    FIN_TOUR
+};
+
+void AffichageSDL::SdlBoucle(Jeu &Jeu)
+{
+    SDL_Event events;
+    bool quit = false;
+    bool de_lancer_aff = false;
+
+    EtatJeu etat = ATTENTE_LANCER_DE;
+    while (!quit)
+    {
+        
+
+        while (SDL_PollEvent(&events))
+        {
+            if (events.type == SDL_QUIT)
+                quit = true;
+
+            if (events.type == SDL_KEYDOWN)
+            {
+                switch (events.key.keysym.scancode)
+                {
+                case SDL_SCANCODE_ESCAPE:
+                    quit = true;
+                    break;
+
+                case SDL_SCANCODE_SPACE:
+                    if (etat == ATTENTE_LANCER_DE)
+                    {
+                        Jeu.GetDe().LancerDe();
+                        cout << "Dé lancé, valeur = " << Jeu.GetDe().GetVal() << endl;
+                        etat = ATTENTE_ACTION;
+                        de_lancer_aff = true;
+                    }
+                    break;
+
+                case SDL_SCANCODE_RETURN:
+                    if (etat == ATTENTE_ACTION)
+                    {
+                        cout << "Sortie de pion" << endl;
+                        Jeu.GetJoueur(0)->SortirPionBase({10, 10});
+                        etat = FIN_TOUR;
+                    }
+                    break;
+
+                case SDL_SCANCODE_N: // Touche pour passer au tour suivant par exemple
+                    //if (etat == FIN_TOUR)
+                    //{
+                        etat = ATTENTE_LANCER_DE;
+                    //}
+                    break;
+
+                default:
+                    //etat = ATTENTE_LANCER_DE;
+                    break;
+                }
+            }
+        }
+
+        // Affichage
+
+        SdlAff(de_lancer_aff, Jeu.GetDe(), Jeu);
+        de_lancer_aff =false;
+        SDL_RenderPresent(m_renderer);
+    }
+}*/

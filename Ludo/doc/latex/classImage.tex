@@ -1,0 +1,69 @@
+\hypertarget{classImage}{}\doxysection{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+pour gerer une image avec SDL2  
+
+
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classImage_ab96ea3e2b3c1072fbed99a7834364f68}{load\+From\+File}} (const char $\ast$filename, SDL\+\_\+\+Renderer $\ast$m\+\_\+renderer)
+\begin{DoxyCompactList}\small\item\em charge une image depuis un fichier et la convertit en une texture utilsable par la SDL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ae374954586a1bf7e4c798f7259e7c593}{load\+From\+Current\+Surface}} (SDL\+\_\+\+Renderer $\ast$m\+\_\+renderer)
+\item 
+\mbox{\Hypertarget{classImage_a77c08ca476deb3531ad4184473d8de6a}\label{classImage_a77c08ca476deb3531ad4184473d8de6a}} 
+void {\bfseries draw} (SDL\+\_\+\+Renderer $\ast$m\+\_\+renderer, int x, int y, int w=-\/1, int h=-\/1)
+\item 
+\mbox{\Hypertarget{classImage_ae9e27e310b4322d04366f2882f3a4242}\label{classImage_ae9e27e310b4322d04366f2882f3a4242}} 
+SDL\+\_\+\+Texture $\ast$ {\bfseries get\+Texture} () const
+\item 
+\mbox{\Hypertarget{classImage_a833f5d3b4b9f905320c6dffcc9b84b95}\label{classImage_a833f5d3b4b9f905320c6dffcc9b84b95}} 
+void {\bfseries set\+Surface} (SDL\+\_\+\+Surface $\ast$surf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+pour gerer une image avec SDL2 
+
+======== CLASS IMAGE ======== 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_ae374954586a1bf7e4c798f7259e7c593}\label{classImage_ae374954586a1bf7e4c798f7259e7c593}} 
+\index{Image@{Image}!loadFromCurrentSurface@{loadFromCurrentSurface}}
+\index{loadFromCurrentSurface@{loadFromCurrentSurface}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadFromCurrentSurface()}{loadFromCurrentSurface()}}
+{\footnotesize\ttfamily void Image\+::load\+From\+Current\+Surface (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{m\+\_\+renderer }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+renderer} & le renderer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_ab96ea3e2b3c1072fbed99a7834364f68}\label{classImage_ab96ea3e2b3c1072fbed99a7834364f68}} 
+\index{Image@{Image}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily void Image\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{m\+\_\+renderer }\end{DoxyParamCaption})}
+
+
+
+charge une image depuis un fichier et la convertit en une texture utilsable par la SDL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & le fichier \\
+\hline
+{\em m\+\_\+renderer} & le renderer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Image.\+h\item 
+src/Image.\+cpp\end{DoxyCompactItemize}

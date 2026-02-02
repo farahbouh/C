@@ -1,0 +1,348 @@
+\hypertarget{classJoueur}{}\doxysection{Joueur Class Reference}
+\label{classJoueur}\index{Joueur@{Joueur}}
+
+
+definit le \mbox{\hyperlink{classJoueur}{Joueur}} et ses données  
+
+
+
+
+{\ttfamily \#include $<$Joueur.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJoueur_add6c98be3020651d84f6d75ccc1d867e}\label{classJoueur_add6c98be3020651d84f6d75ccc1d867e}} 
+\mbox{\hyperlink{classJoueur_add6c98be3020651d84f6d75ccc1d867e}{Joueur}} ()
+\begin{DoxyCompactList}\small\item\em le constructeur sans params \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJoueur_afcffc224855ea647ab3d5f7fb5bfe432}{Joueur}} (unsigned int ident, Type\+Joueur t, unsigned char r, unsigned char v, unsigned char b)
+\begin{DoxyCompactList}\small\item\em le constructeur avec params \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_a9fb594f755601ee77ce5884c4c0861f3}\label{classJoueur_a9fb594f755601ee77ce5884c4c0861f3}} 
+\mbox{\hyperlink{classJoueur_a9fb594f755601ee77ce5884c4c0861f3}{$\sim$\+Joueur}} ()
+\begin{DoxyCompactList}\small\item\em le destructeur de la classe \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classJoueur_a717e9a8898196110d101092abb55bfcd}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em methode qui retourne l\textquotesingle{}Id du joueur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structColor}{Color}} \mbox{\hyperlink{classJoueur_a5d2ab25bfe5918d34694a24e0a64bdb2}{get\+Couleur}} () const
+\begin{DoxyCompactList}\small\item\em methode qui retourne la couleur du joueur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_ad5c78b4dc6361d08c1252cd1a57959d4}{Get\+Nbpion\+Arrives}} () const
+\begin{DoxyCompactList}\small\item\em retourne le nombre de pions arrives a destination \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_a6fd409f1d1405712bf4fad0b62b7ce51}\label{classJoueur_a6fd409f1d1405712bf4fad0b62b7ce51}} 
+void \mbox{\hyperlink{classJoueur_a6fd409f1d1405712bf4fad0b62b7ce51}{Incrementer\+Nb\+Pion\+Arrive}} ()
+\begin{DoxyCompactList}\small\item\em met a jour le nb de piosn arrives \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPion}{Pion}} \& \mbox{\hyperlink{classJoueur_a207064121e0fbc75a13377a1a1d86069}{Get\+Pion}} (int indice)
+\begin{DoxyCompactList}\small\item\em retourne le pion d\textquotesingle{}indice donnée \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_afa4134422090a22be2c6baa39a79447d}{Get\+Pions\+En\+Jeu}} (\mbox{\hyperlink{classPion}{Pion}} pions\+\_\+en\+\_\+jeu\mbox{[}4\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em recupere le tableau statique de pions qui sont en jeu \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJoueur_af77eab03dd1177d8942ba95f317d204d}{Joueur\+\_\+\+Gagnant}} ()
+\begin{DoxyCompactList}\small\item\em renvoie vrai si tous les pions du jours sonr arrives \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classJoueur_aadc26d3924b5fcf094721b4f65481258}{Get\+XPion}} (int id\+\_\+pion) const
+\begin{DoxyCompactList}\small\item\em renvoie la coord X du pion \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classJoueur_a791d9db1e3a93a7e8425e7a9f575a48f}{Get\+YPion}} (int id\+\_\+pion) const
+\begin{DoxyCompactList}\small\item\em renvoie la coord Y du pion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_aeef584c7a334b5d7c773dc92fa3afbd8}{Set\+Xpion}} (int id\+\_\+p, float cx)
+\begin{DoxyCompactList}\small\item\em modifie la coord X du pion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a0315d46e7d8ad61f9b0075e58a0cd952}{Set\+Ypion}} (int id\+\_\+p, float cy)
+\begin{DoxyCompactList}\small\item\em modifie la coord Y du pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_a78d30b5d86d682b3347c932ef721eda9}\label{classJoueur_a78d30b5d86d682b3347c932ef721eda9}} 
+void {\bfseries Rentrer\+Pion\+Base} (int id\+\_\+pion, pair$<$ float, float $>$ coordo\+\_\+pion)
+\item 
+void \mbox{\hyperlink{classJoueur_a5ce1d2b417d8351521628c80cdf954ea}{Remplir\+Coordonnee\+Poule}} (float cx, float cy)
+\begin{DoxyCompactList}\small\item\em remplit le tab de coordonnées des piosn dans la poule \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a63bc9f9a0f0cb4ea4d1816bfe2300b42}{Sortir\+Pion\+Base}} (pair$<$ int, int $>$ Coord\+Sorti\+Base)
+\begin{DoxyCompactList}\small\item\em sort le pion de la poule en le mettant aux coordonnes en params \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a073c4a2adf46b4ddcf77f58252f08c2c}{Deplacer\+Un\+Pion}} (int id\+\_\+pion, int val\+\_\+de)
+\begin{DoxyCompactList}\small\item\em deplace le pion en fnction de la valeur du dé \end{DoxyCompactList}\item 
+Type\+Joueur \mbox{\hyperlink{classJoueur_a47ddd2cc835d874d80506f7ae4f64a53}{Get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em retourne le type du joueur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a02032bf8c60c26af3852086bcec5c29c}{Set\+Type}} (Type\+Joueur t)
+\begin{DoxyCompactList}\small\item\em change le type du joueur \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJoueur_ae5f26ebf9f96e4d7487f1a37bddebec2}{Tous\+Pions\+Sortis}} ()
+\begin{DoxyCompactList}\small\item\em verifie que tous les pions spnt sortis \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_a26d38e39feb2ce8534139e7c7ac611cd}\label{classJoueur_a26d38e39feb2ce8534139e7c7ac611cd}} 
+void \mbox{\hyperlink{classJoueur_a26d38e39feb2ce8534139e7c7ac611cd}{test\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em teste toutes les fonctions de la classe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definit le \mbox{\hyperlink{classJoueur}{Joueur}} et ses données 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJoueur_afcffc224855ea647ab3d5f7fb5bfe432}\label{classJoueur_afcffc224855ea647ab3d5f7fb5bfe432}} 
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{Joueur()}{Joueur()}}
+{\footnotesize\ttfamily Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{unsigned int}]{ident,  }\item[{Type\+Joueur}]{t,  }\item[{unsigned char}]{r,  }\item[{unsigned char}]{v,  }\item[{unsigned char}]{b }\end{DoxyParamCaption})}
+
+
+
+le constructeur avec params 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ident} & l\textquotesingle{}identifiant du joueur \\
+\hline
+{\em r} & le nouveau r de la couleur \\
+\hline
+{\em v} & le nouveau v de la couleur \\
+\hline
+{\em b} & le nouveau b de la couleur \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJoueur_a073c4a2adf46b4ddcf77f58252f08c2c}\label{classJoueur_a073c4a2adf46b4ddcf77f58252f08c2c}} 
+\index{Joueur@{Joueur}!DeplacerUnPion@{DeplacerUnPion}}
+\index{DeplacerUnPion@{DeplacerUnPion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{DeplacerUnPion()}{DeplacerUnPion()}}
+{\footnotesize\ttfamily void Joueur\+::\+Deplacer\+Un\+Pion (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+pion,  }\item[{int}]{val\+\_\+de }\end{DoxyParamCaption})}
+
+
+
+deplace le pion en fnction de la valeur du dé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+pion} & l\textquotesingle{}indice du pion \\
+\hline
+{\em val\+\_\+de} & la valeur du dé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a5d2ab25bfe5918d34694a24e0a64bdb2}\label{classJoueur_a5d2ab25bfe5918d34694a24e0a64bdb2}} 
+\index{Joueur@{Joueur}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structColor}{Color}} Joueur\+::get\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+methode qui retourne la couleur du joueur 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structColor}{Color}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a717e9a8898196110d101092abb55bfcd}\label{classJoueur_a717e9a8898196110d101092abb55bfcd}} 
+\index{Joueur@{Joueur}!getId@{getId}}
+\index{getId@{getId}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily unsigned int Joueur\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+methode qui retourne l\textquotesingle{}Id du joueur 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_ad5c78b4dc6361d08c1252cd1a57959d4}\label{classJoueur_ad5c78b4dc6361d08c1252cd1a57959d4}} 
+\index{Joueur@{Joueur}!GetNbpionArrives@{GetNbpionArrives}}
+\index{GetNbpionArrives@{GetNbpionArrives}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetNbpionArrives()}{GetNbpionArrives()}}
+{\footnotesize\ttfamily int Joueur\+::\+Get\+Nbpion\+Arrives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le nombre de pions arrives a destination 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a207064121e0fbc75a13377a1a1d86069}\label{classJoueur_a207064121e0fbc75a13377a1a1d86069}} 
+\index{Joueur@{Joueur}!GetPion@{GetPion}}
+\index{GetPion@{GetPion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetPion()}{GetPion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPion}{Pion}} \& Joueur\+::\+Get\+Pion (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+retourne le pion d\textquotesingle{}indice donnée 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indice} & l\textquotesingle{}indice du pion à renvoyer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classPion}{Pion}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_afa4134422090a22be2c6baa39a79447d}\label{classJoueur_afa4134422090a22be2c6baa39a79447d}} 
+\index{Joueur@{Joueur}!GetPionsEnJeu@{GetPionsEnJeu}}
+\index{GetPionsEnJeu@{GetPionsEnJeu}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetPionsEnJeu()}{GetPionsEnJeu()}}
+{\footnotesize\ttfamily void Joueur\+::\+Get\+Pions\+En\+Jeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPion}{Pion}}}]{pions\+\_\+en\+\_\+jeu\mbox{[}4\mbox{]} }\end{DoxyParamCaption}) const}
+
+
+
+recupere le tableau statique de pions qui sont en jeu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pions\+\_\+en\+\_\+jeu\mbox{[}4\mbox{]}} & le tab de taille 4 des pions du joueur en jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a47ddd2cc835d874d80506f7ae4f64a53}\label{classJoueur_a47ddd2cc835d874d80506f7ae4f64a53}} 
+\index{Joueur@{Joueur}!GetType@{GetType}}
+\index{GetType@{GetType}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily Type\+Joueur Joueur\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+retourne le type du joueur 
+
+\begin{DoxyReturn}{Returns}
+Type\+Joueur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_aadc26d3924b5fcf094721b4f65481258}\label{classJoueur_aadc26d3924b5fcf094721b4f65481258}} 
+\index{Joueur@{Joueur}!GetXPion@{GetXPion}}
+\index{GetXPion@{GetXPion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetXPion()}{GetXPion()}}
+{\footnotesize\ttfamily float Joueur\+::\+Get\+XPion (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+pion }\end{DoxyParamCaption}) const}
+
+
+
+renvoie la coord X du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+pion} & l\textquotesingle{}indice du pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a791d9db1e3a93a7e8425e7a9f575a48f}\label{classJoueur_a791d9db1e3a93a7e8425e7a9f575a48f}} 
+\index{Joueur@{Joueur}!GetYPion@{GetYPion}}
+\index{GetYPion@{GetYPion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{GetYPion()}{GetYPion()}}
+{\footnotesize\ttfamily float Joueur\+::\+Get\+YPion (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+pion }\end{DoxyParamCaption}) const}
+
+
+
+renvoie la coord Y du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+pion} & l\textquotesingle{}indice du pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_af77eab03dd1177d8942ba95f317d204d}\label{classJoueur_af77eab03dd1177d8942ba95f317d204d}} 
+\index{Joueur@{Joueur}!Joueur\_Gagnant@{Joueur\_Gagnant}}
+\index{Joueur\_Gagnant@{Joueur\_Gagnant}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{Joueur\_Gagnant()}{Joueur\_Gagnant()}}
+{\footnotesize\ttfamily bool Joueur\+::\+Joueur\+\_\+\+Gagnant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+renvoie vrai si tous les pions du jours sonr arrives 
+
+\begin{DoxyReturn}{Returns}
+true si vrai 
+
+false le cas echeant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a5ce1d2b417d8351521628c80cdf954ea}\label{classJoueur_a5ce1d2b417d8351521628c80cdf954ea}} 
+\index{Joueur@{Joueur}!RemplirCoordonneePoule@{RemplirCoordonneePoule}}
+\index{RemplirCoordonneePoule@{RemplirCoordonneePoule}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{RemplirCoordonneePoule()}{RemplirCoordonneePoule()}}
+{\footnotesize\ttfamily void Joueur\+::\+Remplir\+Coordonnee\+Poule (\begin{DoxyParamCaption}\item[{float}]{cx,  }\item[{float}]{cy }\end{DoxyParamCaption})}
+
+
+
+remplit le tab de coordonnées des piosn dans la poule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cx} & la coord X du pion dans la poule \\
+\hline
+{\em cy} & la coord Y du pion dans la poule \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a02032bf8c60c26af3852086bcec5c29c}\label{classJoueur_a02032bf8c60c26af3852086bcec5c29c}} 
+\index{Joueur@{Joueur}!SetType@{SetType}}
+\index{SetType@{SetType}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{SetType()}{SetType()}}
+{\footnotesize\ttfamily void Joueur\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{Type\+Joueur}]{t }\end{DoxyParamCaption})}
+
+
+
+change le type du joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & le type du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_aeef584c7a334b5d7c773dc92fa3afbd8}\label{classJoueur_aeef584c7a334b5d7c773dc92fa3afbd8}} 
+\index{Joueur@{Joueur}!SetXpion@{SetXpion}}
+\index{SetXpion@{SetXpion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{SetXpion()}{SetXpion()}}
+{\footnotesize\ttfamily void Joueur\+::\+Set\+Xpion (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+p,  }\item[{float}]{cx }\end{DoxyParamCaption})}
+
+
+
+modifie la coord X du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+p} & l\textquotesingle{}indice du pion \\
+\hline
+{\em cx} & le new X du pion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a0315d46e7d8ad61f9b0075e58a0cd952}\label{classJoueur_a0315d46e7d8ad61f9b0075e58a0cd952}} 
+\index{Joueur@{Joueur}!SetYpion@{SetYpion}}
+\index{SetYpion@{SetYpion}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{SetYpion()}{SetYpion()}}
+{\footnotesize\ttfamily void Joueur\+::\+Set\+Ypion (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+p,  }\item[{float}]{cy }\end{DoxyParamCaption})}
+
+
+
+modifie la coord Y du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+p} & l\textquotesingle{}indice du pion \\
+\hline
+{\em cy} & le new Y du pion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a63bc9f9a0f0cb4ea4d1816bfe2300b42}\label{classJoueur_a63bc9f9a0f0cb4ea4d1816bfe2300b42}} 
+\index{Joueur@{Joueur}!SortirPionBase@{SortirPionBase}}
+\index{SortirPionBase@{SortirPionBase}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{SortirPionBase()}{SortirPionBase()}}
+{\footnotesize\ttfamily void Joueur\+::\+Sortir\+Pion\+Base (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{Coord\+Sorti\+Base }\end{DoxyParamCaption})}
+
+
+
+sort le pion de la poule en le mettant aux coordonnes en params 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Coord\+Sorti\+Base} & les coords x et y(en pair) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_ae5f26ebf9f96e4d7487f1a37bddebec2}\label{classJoueur_ae5f26ebf9f96e4d7487f1a37bddebec2}} 
+\index{Joueur@{Joueur}!TousPionsSortis@{TousPionsSortis}}
+\index{TousPionsSortis@{TousPionsSortis}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{TousPionsSortis()}{TousPionsSortis()}}
+{\footnotesize\ttfamily bool Joueur\+::\+Tous\+Pions\+Sortis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+verifie que tous les pions spnt sortis 
+
+\begin{DoxyReturn}{Returns}
+true si vrai 
+
+false si le cas echeant 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Joueur.\+h\item 
+src/Joueur.\+cpp\end{DoxyCompactItemize}

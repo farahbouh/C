@@ -1,0 +1,85 @@
+\hypertarget{classAffichageSDL}{}\doxysection{Affichage\+SDL Class Reference}
+\label{classAffichageSDL}\index{AffichageSDL@{AffichageSDL}}
+
+
+gere l\textquotesingle{}affichage sdl du jeu  
+
+
+
+
+{\ttfamily \#include $<$Affichage\+SDL.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAffichageSDL_a5ea6271fa2dac3afb7a6e660e5f41f51}\label{classAffichageSDL_a5ea6271fa2dac3afb7a6e660e5f41f51}} 
+\mbox{\hyperlink{classAffichageSDL_a5ea6271fa2dac3afb7a6e660e5f41f51}{Affichage\+SDL}} ()
+\begin{DoxyCompactList}\small\item\em Initialise SDL et charge les ressources(\+Constructeur) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAffichageSDL_a6dfde00b8e858e7a9a3e5e9b868c90d8}\label{classAffichageSDL_a6dfde00b8e858e7a9a3e5e9b868c90d8}} 
+\mbox{\hyperlink{classAffichageSDL_a6dfde00b8e858e7a9a3e5e9b868c90d8}{$\sim$\+Affichage\+SDL}} ()
+\begin{DoxyCompactList}\small\item\em (Destructeur) libere de la memoire allouee \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAffichageSDL_a23cfa19e70df9fee859bdbc5c3a4564f}\label{classAffichageSDL_a23cfa19e70df9fee859bdbc5c3a4564f}} 
+void \mbox{\hyperlink{classAffichageSDL_a23cfa19e70df9fee859bdbc5c3a4564f}{Sdl\+Boucle}} (\mbox{\hyperlink{classJeu}{Jeu}} \&J)
+\begin{DoxyCompactList}\small\item\em Boucle principale qui gere les evenements du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAffichageSDL_a9daba177a913620b8fee1c47fd4cbbac}{Animer\+Deplacement}} (\mbox{\hyperlink{classJeu}{Jeu}} \&\mbox{\hyperlink{classJeu}{Jeu}}, int joueur\+\_\+actuel, int id\+\_\+pion, int i\+\_\+depart, int i\+\_\+arrivee)
+\begin{DoxyCompactList}\small\item\em animation pour voir les pions se deplacer 1 par 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAffichageSDL_a8da2127e1a903d41f29a6974294d42fb}{Afficher\+Texte}} (SDL\+\_\+\+Renderer $\ast$renderer, TTF\+\_\+\+Font $\ast$font, const string \&texte, int x, int y)
+\begin{DoxyCompactList}\small\item\em donne nom pour chq joueur \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+gere l\textquotesingle{}affichage sdl du jeu 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAffichageSDL_a8da2127e1a903d41f29a6974294d42fb}\label{classAffichageSDL_a8da2127e1a903d41f29a6974294d42fb}} 
+\index{AffichageSDL@{AffichageSDL}!AfficherTexte@{AfficherTexte}}
+\index{AfficherTexte@{AfficherTexte}!AffichageSDL@{AffichageSDL}}
+\doxysubsubsection{\texorpdfstring{AfficherTexte()}{AfficherTexte()}}
+{\footnotesize\ttfamily void Affichage\+SDL\+::\+Afficher\+Texte (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{TTF\+\_\+\+Font $\ast$}]{font,  }\item[{const string \&}]{texte,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+donne nom pour chq joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & renderer \\
+\hline
+{\em font} & police \\
+\hline
+{\em texte} & texte a ecrire \\
+\hline
+{\em x} & coordonnee \\
+\hline
+{\em y} & coordonnee \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAffichageSDL_a9daba177a913620b8fee1c47fd4cbbac}\label{classAffichageSDL_a9daba177a913620b8fee1c47fd4cbbac}} 
+\index{AffichageSDL@{AffichageSDL}!AnimerDeplacement@{AnimerDeplacement}}
+\index{AnimerDeplacement@{AnimerDeplacement}!AffichageSDL@{AffichageSDL}}
+\doxysubsubsection{\texorpdfstring{AnimerDeplacement()}{AnimerDeplacement()}}
+{\footnotesize\ttfamily void Affichage\+SDL\+::\+Animer\+Deplacement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJeu}{Jeu}} \&}]{Jeu,  }\item[{int}]{joueur\+\_\+actuel,  }\item[{int}]{id\+\_\+pion,  }\item[{int}]{i\+\_\+depart,  }\item[{int}]{i\+\_\+arrivee }\end{DoxyParamCaption})}
+
+
+
+animation pour voir les pions se deplacer 1 par 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classJeu}{Jeu}}} & jeu \\
+\hline
+{\em joueur\+\_\+actuel} & joueur a qui on effectue animation \\
+\hline
+{\em id\+\_\+pion} & pion a deplacer \\
+\hline
+{\em i\+\_\+depart} & ancienne position \\
+\hline
+{\em i\+\_\+arrivee} & nouvelle position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Affichage\+SDL.\+h\item 
+src/Affichage\+SDL.\+cpp\end{DoxyCompactItemize}

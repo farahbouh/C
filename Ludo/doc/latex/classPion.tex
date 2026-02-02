@@ -1,0 +1,266 @@
+\hypertarget{classPion}{}\doxysection{Pion Class Reference}
+\label{classPion}\index{Pion@{Pion}}
+
+
+Un pion d\textquotesingle{}un joueur qui se deplace le long d\textquotesingle{}un chemin.  
+
+
+
+
+{\ttfamily \#include $<$Pion.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPion_af429f0e155063c80a65703f1503f6b65}\label{classPion_af429f0e155063c80a65703f1503f6b65}} 
+\mbox{\hyperlink{classPion_af429f0e155063c80a65703f1503f6b65}{Pion}} (int idf)
+\begin{DoxyCompactList}\small\item\em Constructeur qui initialise un pion dans la poule. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_a94f2fa0a967d781c32c16a32b439e298}\label{classPion_a94f2fa0a967d781c32c16a32b439e298}} 
+\mbox{\hyperlink{classPion_a94f2fa0a967d781c32c16a32b439e298}{$\sim$\+Pion}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur qui vide un pion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPion_a96ad62a5bcfe77c5907acd2955e0a157}{Get\+Tour}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nbr de tour. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_a447cd90aeca2ad7442c84b021f47cd57}\label{classPion_a447cd90aeca2ad7442c84b021f47cd57}} 
+void \mbox{\hyperlink{classPion_a447cd90aeca2ad7442c84b021f47cd57}{Incremente\+Tour}} ()
+\begin{DoxyCompactList}\small\item\em Incremente le nombre de tour. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_abf61d2e8412aaa07eb64aba3381ee3fb}\label{classPion_abf61d2e8412aaa07eb64aba3381ee3fb}} 
+void \mbox{\hyperlink{classPion_abf61d2e8412aaa07eb64aba3381ee3fb}{Reset\+Tour}} ()
+\begin{DoxyCompactList}\small\item\em Remet a 0 le nbr de tour. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classPion_a7d3195e02d16804ca22e8d74ed8bf742}{GetI}} () const
+\begin{DoxyCompactList}\small\item\em Retourne position du pion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPion_aa8e732dfce6495dbed5985b923a083fb}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Retourne identifiant du pion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPion_a97aa0c73133f80e3c824d5b6ea4ea25b}{Get\+Est\+Sorti}} () const
+\begin{DoxyCompactList}\small\item\em Retourne si le pion est sorti de sa poule ou non ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_a1de263025622f7f8feca71261040c7ea}\label{classPion_a1de263025622f7f8feca71261040c7ea}} 
+void \mbox{\hyperlink{classPion_a1de263025622f7f8feca71261040c7ea}{Set\+Est\+Arrive}} ()
+\begin{DoxyCompactList}\small\item\em Met a true est arrivé \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPion_a80d8b10bc41688b49bf51f900c0052f7}{Get\+Est\+Arrive}} () const
+\begin{DoxyCompactList}\small\item\em Retourne si le pion est arrivé a la case d\textquotesingle{}arrivée ou non. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_ab55c0a991887e57174beeb90a128de37}{SetI}} (const int nb)
+\begin{DoxyCompactList}\small\item\em Deplace le pion en fonction du nombre du dé lancé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_a02cb65fc96d0330ab6a5fd17233b283a}{ChangerI}} (const int nb)
+\begin{DoxyCompactList}\small\item\em change la position du pion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_a8e96e115223c22d91ac28fa7233ed7af}{Sortir\+De\+La\+Base}} (const float newx, const float newy)
+\begin{DoxyCompactList}\small\item\em elle sort le pion donc change les coordonnees dun pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_a33cc234e3912cf8d01dda188bc109588}\label{classPion_a33cc234e3912cf8d01dda188bc109588}} 
+void \mbox{\hyperlink{classPion_a33cc234e3912cf8d01dda188bc109588}{Retourner\+Base}} ()
+\begin{DoxyCompactList}\small\item\em retourne le pion dans la poule en changeant le i et ses coordonnées \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_aee40067bf4fbf6a01ffd1350232079ec}{Coordonnees\+Pion\+Poule}} (const float x, const float y)
+\begin{DoxyCompactList}\small\item\em remplir coordonnée des pions dans la poule \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPion_a85dbc33a867067d38f9aeb19030556cf}{Get\+XPion}} () const
+\begin{DoxyCompactList}\small\item\em Retourne les coordonnées x d\textquotesingle{}un pion. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPion_a184fefe79fd4514cd9c0fee25e49fced}{Get\+YPion}} () const
+\begin{DoxyCompactList}\small\item\em Retourne les coordonnées y d\textquotesingle{}un pion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_a1c7c977c8744ad4c22cd0b346c3861a8}{SetX}} (float cx)
+\begin{DoxyCompactList}\small\item\em modifie les coordonnées x d\textquotesingle{}un pion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPion_a09a2f330e404ad0ce0d9e96707d1ad19}{SetY}} (float cy)
+\begin{DoxyCompactList}\small\item\em modifie les coordonnées x d\textquotesingle{}un pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPion_abb07f12752ba4b59d1fbd0050e220c22}\label{classPion_abb07f12752ba4b59d1fbd0050e220c22}} 
+void \mbox{\hyperlink{classPion_abb07f12752ba4b59d1fbd0050e220c22}{test\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em fait les tests de toutes les fonctions de la classe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un pion d\textquotesingle{}un joueur qui se deplace le long d\textquotesingle{}un chemin. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPion_a02cb65fc96d0330ab6a5fd17233b283a}\label{classPion_a02cb65fc96d0330ab6a5fd17233b283a}} 
+\index{Pion@{Pion}!ChangerI@{ChangerI}}
+\index{ChangerI@{ChangerI}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{ChangerI()}{ChangerI()}}
+{\footnotesize\ttfamily void Pion\+::\+ChangerI (\begin{DoxyParamCaption}\item[{const int}]{nb }\end{DoxyParamCaption})}
+
+
+
+change la position du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & le nombre de cases que doit changer le i \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPion_aee40067bf4fbf6a01ffd1350232079ec}\label{classPion_aee40067bf4fbf6a01ffd1350232079ec}} 
+\index{Pion@{Pion}!CoordonneesPionPoule@{CoordonneesPionPoule}}
+\index{CoordonneesPionPoule@{CoordonneesPionPoule}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{CoordonneesPionPoule()}{CoordonneesPionPoule()}}
+{\footnotesize\ttfamily void Pion\+::\+Coordonnees\+Pion\+Poule (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y }\end{DoxyParamCaption})}
+
+
+
+remplir coordonnée des pions dans la poule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordonnée x du pion \\
+\hline
+{\em y} & coordonée y du pion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPion_a80d8b10bc41688b49bf51f900c0052f7}\label{classPion_a80d8b10bc41688b49bf51f900c0052f7}} 
+\index{Pion@{Pion}!GetEstArrive@{GetEstArrive}}
+\index{GetEstArrive@{GetEstArrive}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetEstArrive()}{GetEstArrive()}}
+{\footnotesize\ttfamily bool Pion\+::\+Get\+Est\+Arrive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne si le pion est arrivé a la case d\textquotesingle{}arrivée ou non. 
+
+\begin{DoxyReturn}{Returns}
+true si est\+\_\+arrive est vrai 
+
+false le cas echeant ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_a97aa0c73133f80e3c824d5b6ea4ea25b}\label{classPion_a97aa0c73133f80e3c824d5b6ea4ea25b}} 
+\index{Pion@{Pion}!GetEstSorti@{GetEstSorti}}
+\index{GetEstSorti@{GetEstSorti}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetEstSorti()}{GetEstSorti()}}
+{\footnotesize\ttfamily bool Pion\+::\+Get\+Est\+Sorti (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne si le pion est sorti de sa poule ou non ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+true si le pion est sorti de la poule 
+
+false le cas echeant ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_a7d3195e02d16804ca22e8d74ed8bf742}\label{classPion_a7d3195e02d16804ca22e8d74ed8bf742}} 
+\index{Pion@{Pion}!GetI@{GetI}}
+\index{GetI@{GetI}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetI()}{GetI()}}
+{\footnotesize\ttfamily unsigned int Pion\+::\+GetI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne position du pion. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_aa8e732dfce6495dbed5985b923a083fb}\label{classPion_aa8e732dfce6495dbed5985b923a083fb}} 
+\index{Pion@{Pion}!GetId@{GetId}}
+\index{GetId@{GetId}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily int Pion\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne identifiant du pion. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_a96ad62a5bcfe77c5907acd2955e0a157}\label{classPion_a96ad62a5bcfe77c5907acd2955e0a157}} 
+\index{Pion@{Pion}!GetTour@{GetTour}}
+\index{GetTour@{GetTour}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetTour()}{GetTour()}}
+{\footnotesize\ttfamily int Pion\+::\+Get\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nbr de tour. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_a85dbc33a867067d38f9aeb19030556cf}\label{classPion_a85dbc33a867067d38f9aeb19030556cf}} 
+\index{Pion@{Pion}!GetXPion@{GetXPion}}
+\index{GetXPion@{GetXPion}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetXPion()}{GetXPion()}}
+{\footnotesize\ttfamily float Pion\+::\+Get\+XPion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne les coordonnées x d\textquotesingle{}un pion. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_a184fefe79fd4514cd9c0fee25e49fced}\label{classPion_a184fefe79fd4514cd9c0fee25e49fced}} 
+\index{Pion@{Pion}!GetYPion@{GetYPion}}
+\index{GetYPion@{GetYPion}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{GetYPion()}{GetYPion()}}
+{\footnotesize\ttfamily float Pion\+::\+Get\+YPion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne les coordonnées y d\textquotesingle{}un pion. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPion_ab55c0a991887e57174beeb90a128de37}\label{classPion_ab55c0a991887e57174beeb90a128de37}} 
+\index{Pion@{Pion}!SetI@{SetI}}
+\index{SetI@{SetI}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{SetI()}{SetI()}}
+{\footnotesize\ttfamily void Pion\+::\+SetI (\begin{DoxyParamCaption}\item[{const int}]{nb }\end{DoxyParamCaption})}
+
+
+
+Deplace le pion en fonction du nombre du dé lancé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & nombre de place à incrémenter a la position du pion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPion_a1c7c977c8744ad4c22cd0b346c3861a8}\label{classPion_a1c7c977c8744ad4c22cd0b346c3861a8}} 
+\index{Pion@{Pion}!SetX@{SetX}}
+\index{SetX@{SetX}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{SetX()}{SetX()}}
+{\footnotesize\ttfamily void Pion\+::\+SetX (\begin{DoxyParamCaption}\item[{float}]{cx }\end{DoxyParamCaption})}
+
+
+
+modifie les coordonnées x d\textquotesingle{}un pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cx} & x a modifider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPion_a09a2f330e404ad0ce0d9e96707d1ad19}\label{classPion_a09a2f330e404ad0ce0d9e96707d1ad19}} 
+\index{Pion@{Pion}!SetY@{SetY}}
+\index{SetY@{SetY}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{SetY()}{SetY()}}
+{\footnotesize\ttfamily void Pion\+::\+SetY (\begin{DoxyParamCaption}\item[{float}]{cy }\end{DoxyParamCaption})}
+
+
+
+modifie les coordonnées x d\textquotesingle{}un pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cy} & x a modifider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPion_a8e96e115223c22d91ac28fa7233ed7af}\label{classPion_a8e96e115223c22d91ac28fa7233ed7af}} 
+\index{Pion@{Pion}!SortirDeLaBase@{SortirDeLaBase}}
+\index{SortirDeLaBase@{SortirDeLaBase}!Pion@{Pion}}
+\doxysubsubsection{\texorpdfstring{SortirDeLaBase()}{SortirDeLaBase()}}
+{\footnotesize\ttfamily void Pion\+::\+Sortir\+De\+La\+Base (\begin{DoxyParamCaption}\item[{const float}]{newx,  }\item[{const float}]{newy }\end{DoxyParamCaption})}
+
+
+
+elle sort le pion donc change les coordonnees dun pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newx} & le new position du x \\
+\hline
+{\em newy} & le new position y \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Pion.\+h\item 
+src/Pion.\+cpp\end{DoxyCompactItemize}
